@@ -84,7 +84,6 @@ jobs:
           ./redpill_tool_chain.sh add https://raw.githubusercontent.com/pocopico/rp-ext/master/r8169/rpext-index.json
           ./redpill_tool_chain.sh add https://github.com/pocopico/redpill-load/raw/develop/redpill-acpid/rpext-index.json
           ./redpill_tool_chain.sh add https://raw.githubusercontent.com/pocopico/rp-ext/master/r8152/rpext-index.json
-          ./redpill_tool_chain.sh add https://github.com/jumkey/redpill-load/raw/develop/redpill-misc/rpext-index.json' 
           
       - name: 添加扩展驱动[dva3221]
         if: matrix.platform == 'dva3221'
@@ -94,8 +93,9 @@ jobs:
 
       - name: 添加 Misc shell
         run: |
-          ./redpill_tool_chain.sh add https://github.com/tossp/redpill-tool-chain/raw/master/extensions/redpill-misc.json
-
+          
+          ./redpill_tool_chain.sh add https://github.com/jumkey/redpill-load/raw/develop/redpill-misc/rpext-index.json' 
+          
       - name: 添加 jumkey.dtb !!!Create your own device tree binary!!!
         if: matrix.platform == 'ds920p' || matrix.platform == 'ds1621p' || matrix.platform == 'ds2422p'
         run: |
