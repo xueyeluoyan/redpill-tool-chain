@@ -74,7 +74,7 @@ jobs:
           cat ${{matrix.platform}}_user_config.json
 
       - name: 添加扩展驱动
-        if: matrix.platform == 'ds3617xs'
+        if: matrix.platform != 'ds3617xs'
         run: |
           ./redpill_tool_chain.sh add https://github.com/tossp/redpill-tool-chain/raw/master/extensions/redpill-boot-wait.json
           ./redpill_tool_chain.sh add https://github.com/tossp/redpill-tool-chain/raw/master/extensions/redpill-acpid.json
@@ -98,7 +98,7 @@ jobs:
           
           
       - name: 添加扩展驱动[dva3221]
-        if: matrix.platform == 'ds3617xs'
+        if: matrix.platform == 'dva3221'
         run: |
           echo '等待整理兼容性扩展~😀'
           ./redpill_tool_chain.sh add https://github.com/tossp/redpill-tool-chain/raw/master/extensions/redpill-boot-wait.json
