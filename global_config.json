@@ -217,7 +217,7 @@
        },
       "build_env": {
         "jun_mod": 1,
-        "debug": 0
+        "debug": 1
       }
     },
     {
