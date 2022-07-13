@@ -140,7 +140,7 @@
       "platform_name": "DS3615xs",
       "platform_version": "bromolow-7.0.1-42218",
       "user_config_json": "ds3615xs_user_config.json",
-      "docker_base_image": "debian:10-slim",
+      "docker_base_image": "debian:8-slim",
       "compile_with": "toolkit_dev",
       "redpill_lkm_make_target": "dev-v7",
       "downloads": {
